@@ -1,0 +1,29 @@
+.full-container{
+    min-height:100vh;
+    min-width: 100vw;
+    position: relative;
+    background-color: rgba(127, 255, 212, 0.479);
+}
+.half-container button{
+    width:100%;
+    outline:none;
+    border: none;
+    padding: 10px 20px;
+    color:white;
+    background: #dd4b39;
+    border-radius:10px;
+}
+.half-container button:hover{
+    opacity: 90%;
+}
+.half-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height:300px;
+    min-width:250px;
+    transform: translate(-50%, -50%);
+}
+ 
+
+ 
