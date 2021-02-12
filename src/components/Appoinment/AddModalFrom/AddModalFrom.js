@@ -15,11 +15,25 @@ const customStyles = {
 Modal.setAppElement('#root')
 
 const AddModalFrom = ({ modalIsOpen, closeModal, date , appointmentOn }) => {
-
     const { register, handleSubmit, errors } = useForm();
+
     const onSubmit = data =>{
-        console.log(data);
-        closeModal()
+        data.service = appointmentOn;
+        data.date = date;
+        data.created = new Date();
+
+        fetch('http://localhost:5000/appointment' , {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then( response => response.json())
+        .then(success => {
+            if(success){  
+                closeModal();
+                alert('Thanks For Appointment');
+            }
+        })
     };
 
     return (
@@ -48,7 +62,7 @@ const AddModalFrom = ({ modalIsOpen, closeModal, date , appointmentOn }) => {
                         {errors.email && <span className="text-danger">This field is required</span>}
                     </div>
                     <div className="form-group row">
-                        <div className="col-4">
+                        <div className="col-12 col-md-4">
 
                             <select className="form-control" name="gender" ref={register({ required: true })} >
                                 <option disabled={true} value="Not set">Select Gender</option>
@@ -59,11 +73,11 @@ const AddModalFrom = ({ modalIsOpen, closeModal, date , appointmentOn }) => {
                             {errors.gender && <span className="text-danger">This field is required</span>}
 
                         </div>
-                        <div className="col-4">
+                        <div className="col-12 col-md-4">
                             <input ref={register({ required: true })} className="form-control" name="age" placeholder="Your Age" type="number" />
                             {errors.age && <span className="text-danger">This field is required</span>}
                         </div>
-                        <div className="col-4">
+                        <div className="col-12 col-md-4">
                             <input ref={register({ required: true })} className="form-control" name="weight" placeholder="Weight" type="number" />
                             {errors.weight && <span className="text-danger">This field is required</span>}
                         </div>
