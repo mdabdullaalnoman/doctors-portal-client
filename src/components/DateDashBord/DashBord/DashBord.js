@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import AppointmentInfo from '../AppointmentInfo/AppointmentInfo';
 import Clendar from '../Clendar/Clendar';
-import SideBar from '../SideBar/SideBar';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import './DashBord.css';
+import SideBar from '../../Shared/SideBar/SideBar';
 
 const DashBord = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState([]);
     console.log(appointments);
+    
     const handleDateChange = (date) => {
         setSelectedDate(date)
 
@@ -24,7 +26,7 @@ const DashBord = () => {
         <div className="container-fluid">
             <div className="row">
 
-                <div className="col-12 col-md-2">
+                <div className="col-12 col-md-2 ">
                     <SideBar></SideBar>
                 </div>
 
