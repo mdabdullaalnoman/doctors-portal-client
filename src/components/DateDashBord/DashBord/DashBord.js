@@ -9,8 +9,7 @@ import SideBar from '../../Shared/SideBar/SideBar';
 const DashBord = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [appointments, setAppointments] = useState([]);
-    console.log(appointments);
-    
+
     const handleDateChange = (date) => {
         setSelectedDate(date)
 
@@ -19,7 +18,7 @@ const DashBord = () => {
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({date})
         })
-            .then(data => setAppointments(data))
+            .then(data => console.log(data))
     };
 
     return (
