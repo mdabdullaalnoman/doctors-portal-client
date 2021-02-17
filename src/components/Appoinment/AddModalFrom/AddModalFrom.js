@@ -14,26 +14,24 @@ const customStyles = {
 };
 Modal.setAppElement('#root')
 
-const AddModalFrom = ({ modalIsOpen, closeModal, date , appointmentOn }) => {
+const AddModalFrom = ({ modalIsOpen, closeModal, date, appointmentOn }) => {
     const { register, handleSubmit, errors } = useForm();
 
-    const onSubmit = data =>{
+    const onSubmit = data => {
         data.service = appointmentOn;
         data.date = date;
         data.created = new Date();
 
-        fetch('http://localhost:5000/appointment' , {
+        fetch('http://localhost:5000/appointment', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
-        .then( response => response.json())
-        .then(success => {
-            if(success){  
-                closeModal();
-                alert('Thanks For Appointment');
-            }
-        })
+            .then(response => response.json())
+            .then(success => {
+            })
+            alert('Thanks For Appointment');
+            closeModal();
     };
 
     return (

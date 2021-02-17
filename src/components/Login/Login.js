@@ -5,6 +5,10 @@ import firebaseConfig from './FirebaseConfig';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import './Login.css';
+import { ImGoogle } from "@react-icons/all-files/im/ImGoogle";
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
+import { FiTwitter } from "@react-icons/all-files/fi/FiTwitter";
+import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -31,9 +35,34 @@ const Login = () => {
     return (
         <div className="full-container">
             <div className="half-container">
-                <button onClick={handleGoogleSignIn}>GOOGLE SIGN IN</button>
-                <button className="my-3" onClick={handleGoogleSignIn}>GOOGLE SIGN IN</button>
-                <button onClick={handleGoogleSignIn}>GOOGLE SIGN IN</button>
+                <button
+                    onClick={handleGoogleSignIn}>
+                    <span className="mx-2">
+                        <ImGoogle />
+                    </span>GOOGLE SIGN IN
+                 </button>
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="my-3"
+                >
+                    <span className="mx-2">
+                        <ImGoogle />
+                    </span>GOOGLE SIGN IN
+                 </button>
+                <button
+                    onClick={handleGoogleSignIn}>
+                    <span className="mx-2">
+                        <ImGoogle />
+                    </span>GOOGLE SIGN IN
+                 </button>
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="my-3"
+                >
+                    <span className="mx-2">
+                        <ImGoogle />
+                    </span>GOOGLE SIGN IN
+                 </button>
             </div>
         </div>
     );
