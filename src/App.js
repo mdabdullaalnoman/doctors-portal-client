@@ -12,6 +12,7 @@ import PirvateRoute from './components/Login/PirvateRoute';
 import DashBord from './components/DateDashBord/DashBord/DashBord';
 import NoMatch from './components/NoMatch/NoMatch';
 import AddDoctor from './components/DateDashBord/AddDoctor/AddDoctor';
+import AllPatient from './components/DateDashBord/AllPatient/AllPatient';
 
 export const UserContext = createContext();
 
@@ -31,9 +32,9 @@ function App() {
             <Appoinment></Appoinment>
           </Route>
 
-          <Route path="/dashboard/appointment">
+          <PirvateRoute path="/dashboard/appointment">
             <DashBord></DashBord>
-          </Route>
+          </PirvateRoute>
 
           <Route path="/login">
             <Login></Login>
@@ -41,6 +42,10 @@ function App() {
 
           <Route path="/addDoctor">
             <AddDoctor></AddDoctor>
+          </Route>
+
+          <Route path="/allPatient">
+            <AllPatient></AllPatient>
           </Route>
 
           <Route exact path="/">

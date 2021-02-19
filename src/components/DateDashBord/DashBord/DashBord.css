@@ -1,5 +1,29 @@
 .sidebar-bg{
     background-image: linear-gradient(75deg , #19D3ae , #0fcfec);
-    border-radius:20px;
     min-height: 100vh;
 }
+.sidebar-left-bg{
+    background: #ebfffb;
+    min-height: 100vh;
+}
+.calendar{
+    border: none;
+    box-shadow: 1px 1px 13px grey;
+}
+.react-calendar.calendar {
+    margin: auto;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #c43e00;
+  }
+  
+  tr:nth-child(even){background-color:  #f2f2f2}

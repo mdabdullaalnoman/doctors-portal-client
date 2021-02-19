@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import SideBar from '../../Shared/SideBar/SideBar';
+import './AddDoctor.css';
+import { BsCloudUpload } from "@react-icons/all-files/bs/BsCloudUpload";
 
 const AddDoctor = () => {
     const [info, setInfo] = useState({});
@@ -42,21 +44,25 @@ const AddDoctor = () => {
                 <div className="col-12 col-md-2">
                     <SideBar></SideBar>
                 </div>
-                <div className="col-12 col-md-10">
+                <div className="col-12 col-md-10 add-doctor">
+                    <h3 className="text-left my-3 text-secondary">AddDoctor</h3>
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email address</label>
-                            <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email" />
+                        <div className="input-div">
+                            <p>Email Address</p>
+                            <input onBlur={handleBlur} type="email" className="email" name="email" placeholder="Enter email" />
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">Name</label>
-                            <input onBlur={handleBlur} type="text" className="form-control" name="name" placeholder="name" />
+                        <div className="input-div">
+                            <p>Your Name</p>
+                            <input onBlur={handleBlur} type="text" className="name" name="name" placeholder="name" />
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">upload image</label>
-                            <input onChange={handleFileUpload} type="file" className="form-control w-25" placeholder="file upload" />
+                        <div className="input-div">
+                            <p>Upload Image</p>
+                            <div class="upload-btn-wrapper">
+                                <button class="btns"><span class="mr-2"><BsCloudUpload/></span>Upload a file</button>
+                                <input onChange={handleFileUpload} type="file" name="myfile" />
+                            </div>
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="submit">Submit</button>
                     </form>
                 </div>
             </div>

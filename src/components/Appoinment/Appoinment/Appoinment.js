@@ -11,7 +11,7 @@ const Appoinment = () => {
     };
     return ( 
 
-        <div>
+        <div style={{ background:'#a1cae2'}}>
            <Navbar></Navbar>
            <AppoinmentHeaderMain handleDateChange={handleDateChange}></AppoinmentHeaderMain>
            <AddAppointment date={selectedDate}></AddAppointment>

@@ -1,0 +1,59 @@
+
+.add-doctor{
+    background:#e5e5e5b6;
+}
+.add-doctor p{
+    margin-bottom:10px;
+    color: black;
+    font-weight: bold;
+}
+.add-doctor input[type="text"],[type="email"]{
+    width:320px;
+    padding:15px 5px;
+    border: none;
+    outline: none;
+    border-radius:5px;
+}
+
+.input-div{
+    margin-top:20px;
+}
+.submit{
+    background:#111430;
+    color: white;
+    border: none;
+    outline: none;
+    padding:10px 20px;
+    border-radius:5px;
+}
+
+/* Upload Button */
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btns {
+    border: 2px solid #009444;
+    color:#009444 ;
+    background-color:#DEFFED ;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

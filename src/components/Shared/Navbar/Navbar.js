@@ -14,7 +14,7 @@ const Navbar = () => {
                         <a className="nav-link mr-5" href="/home">Home <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5" href="/about">About</a>
+                        <a className="nav-link mr-5" href="/appointment">Appointment</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link mr-5" href="/dashboard/appointment">Dashboard</a>
@@ -23,10 +23,10 @@ const Navbar = () => {
                         <a className="nav-link mr-5 text-white" href="#">Reviews</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="login">login</a>
+                        <a className="nav-link mr-5 text-white" href="/login">login</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link mr-5 text-white" href="#">Contact Us</a>
+                        <a className="nav-link mr-5 text-white" href="login">Admin</a>
                     </li>
                 </ul>
             </div>
